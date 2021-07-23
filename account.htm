@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>All Products-RedStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+ 
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                   <a href="index.htm"> <img src="images/logo.png" width="125px alt="></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.htm" target="_blank">Home</a></li>
+                        <li><a href="product.htm" target="_blank">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="account.htm" target="_blank">Account</a></li>
+
+                    </ul>
+                </nav>
+               <a href="cart.htm" target="_blank"> <img src="images/cart.png" width="30px" height="30px"></a>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+
+<!-- account-page -->
+
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image1.png" width="100%" alt="">
+            </div>
+            <div class="col-2">
+            <div class="form-container">
+                <div class="form-btn">
+                    <span onclick="login()">Login</span>
+                    <span onclick="reg()">Register</span>
+                <hr id="indicator">
+                </div>
+
+                <form action="" id="loginForm">
+                    <input type="text" placeholder="User name">
+                    
+                    <input type="password" placeholder="Password">
+                    <button type="submit" class="btn" value="">Login</button>
+                    <a href="#">Forgot Password</a>
+                </form>
+
+                <form action="" id="regForm">
+                    <input type="text" placeholder="Username">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button type="submit" class="btn">Register</button>
+                </form>
+
+
+                
+            </div>    
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer -->
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our Apps</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="app-logo">
+                <img src="images/play-store.png">
+                <img src="images/app-store.png">
+            </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/logo-white.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, aut..</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>  
+                <ul>
+                    <li>Coupon</li>
+                    <li>Blog Post</li>
+                    <li>Return Policey</li>
+                    <li>Join Affiliate</li>
+                </ul>              
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>  
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                    <li>Twitter</li>
+                </ul>              
+            </div>
+        </div>
+        <p class="copyright">Copyright 2020 - Abdul-Design</p>
+    </div>
+</div>
+
+
+<script>
+    var MenuItems = document.getElementById('MenuItems');
+    MenuItems.style.maxHeight = '0px';
+
+    function menutoggle(){
+        if( MenuItems.style.maxHeight == '0px'){
+            MenuItems.style.maxHeight = '200px';
+        }
+        else{
+         MenuItems.style.maxHeight = '0px';
+        }
+        
+    }
+
+    // js for toggle form
+    
+</script>
+<script>
+    var loginform = document.getElementById('loginForm');
+    var regform = document.getElementById('regForm');
+    var indicator = document.getElementById('indicator');
+ 
+ function reg(){
+     regform.style.transform = 'translateX(0px)';
+    loginform.style.transform = 'translateX(0px)';
+ indicator.style.transform = 'translateX(100px)';
+ }
+ 
+ function login(){
+    regform.style.transform = 'translateX(300px)';
+    loginform.style.transform = 'translateX(300px)';
+    indicator.style.transform = 'translateX(0px)';
+ }
+</script>
+
+
+<!-- jquery for loader -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script>
+        $(window).on("load",function(){
+            $('.loader').addClass("complete");
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>
